@@ -1,0 +1,88 @@
+@font-face { font-family: AFonteParanormal; src: url('fonte/AFonteParanormal-Regular.TTF'); } 
+body{
+    text-align: center;
+    background-color: #0e0e0e;
+}
+hr{
+    border-color: #cebc77;
+}
+#text {
+    background-color: rgb(84, 84, 84);
+    color: #e6e6e6;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 15%;
+    border: solid black 1px;
+}
+#result {
+    font-family: AFonteParanormal;
+    font-size: 36px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 15%;
+    border: solid black 1px;
+    color: #e6e6e6;
+}
+#text2 {
+    font-family: AFonteParanormal;
+    font-size: 36px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 15%;
+    border: solid black 1px;
+    color: #e6e6e6;
+}
+#result2 { 
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    height: 15%;
+    border: solid black 1px;
+    color: #e6e6e6;
+}
+.keyboard {
+    margin-top: 3px;
+    vertical-align: middle;
+    font-family: AFonteParanormal;
+    font-size: 32px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(84, 84, 84);
+    color: #cebc77; 
+}
+.keyboardSpcKey{
+    margin-top: 3px;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 60px;
+    height: 45px;
+    background-color: rgb(84, 84, 84);
+    color: #cebc77; 
+}
+.keyboardSpcKey2{
+    margin-top: 3px;
+    vertical-align: middle;
+    font-size: 15px;
+    width: 60px;
+    height: 45px;
+    background-color: rgb(84, 84, 84);
+    color: #cebc77; 
+}
+.lab{
+    font-size: 20px;
+    color: #e6e6e6;
+}
+#virtualKey{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+::placeholder { 
+  color: #cebc77;
+  opacity: 0.7;
+}
