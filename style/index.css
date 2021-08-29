@@ -1,4 +1,4 @@
-@font-face { font-family: AFonteParanormal; src: url('fonte/AFonteParanormal-Regular.TTF'); } 
+@font-face { font-family: AFonteParanormal; src: url('./fonte/AFonteParanormal-Regular.TTF'); } 
 body{
     text-align: center;
     background-color: #0e0e0e;
@@ -59,15 +59,6 @@ hr{
     margin-top: 3px;
     vertical-align: middle;
     font-size: 20px;
-    width: 60px;
-    height: 45px;
-    background-color: rgb(84, 84, 84);
-    color: #cebc77; 
-}
-.keyboardSpcKey2{
-    margin-top: 3px;
-    vertical-align: middle;
-    font-size: 15px;
     width: 60px;
     height: 45px;
     background-color: rgb(84, 84, 84);
