@@ -1,4 +1,4 @@
-@font-face { font-family: AFonteParanormal; src: url('./fonte/AFonteParanormal-Regular.TTF'); } 
+@font-face { font-family: AFonteParanormal; src: url('./style/fonte/AFonteParanormal-Regular.TTF'); } 
 body{
     text-align: center;
     background-color: #0e0e0e;
