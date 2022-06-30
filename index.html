@@ -1,97 +1,11 @@
 <html>
    <head>
-    <link rel="shortcut icon" href="calam.ico" >  
-    <style>
-      @font-face { font-family: AFonteParanormal; src: url('AFonteParanormal-Regular.TTF'); } 
-      #result {
-         font-family: AFonteParanormal;
-         font-size: 36px;
-         width: 696px;
-         height: 15%;
-         border: solid black 1px;
-      }
-      #text {
-        font-size: 20px;
-        width: 696px;
-        height: 15%;
-        border: solid black 1px;
-      }
-      #result2 { 
-        font-size: 20px;
-        width: 696px;
-        height: 15%;
-        border: solid black 1px;
-      }
-      #text2 {
-        font-family: AFonteParanormal;
-        font-size: 28px;
-        width: 696px;
-        height: 15%;
-        border: solid black 1px;
-      }
-      .keyboard {
-        font-family: AFonteParanormal;
-        font-size: 28px;
-        width: 40px;
-        height: 40px;
-      }
-      .lab{
-        font-size: 20px;
-      }
-    </style>
-    <script>
-      function input(e) {
-          var text2 = document.getElementById("text2");
-          text2.value = text2.value + e.value;
-          translate2();
-      }
-
-      function del() {
-          var text2 = document.getElementById("text2");
-          text2.value = text2.value.substr(0, text2.value.length - 1);
-          translate2();
-      }
-      function space() {
-          var text2 = document.getElementById("text2");
-          text2.value = text2.value+ " ";
-          translate2();
-      }
-      function cle() {
-          var text2 = document.getElementById("text2");
-          text2.value = "";
-          translate2();
-      }
-      function enter() {
-          var text2 = document.getElementById("text2");
-          text2.value = text2.value + "\n";
-          translate2();
-      }
-      function load() {
-          var array = new Array();
-
-          while (array.length < 10) {
-              var temp = Math.round(Math.random() * 9);
-              if (!contain(array, temp)) {
-                  array.push(temp);
-              }
-          }
-          for (i = 0; i < 10; i++) {
-              var btn = document.getElementById("btn" + i);
-              btn.value = array[i];
-          }
-      }
-
-      function translate1(){
-        document.getElementById('result').innerHTML =  document.getElementById('text').value;
-      }
-
-      function translate2(){
-        document.getElementById('result2').innerHTML =  document.getElementById('text2').value;
-      }
-    </script>
+    <link rel="shortcut icon" href="./images/calam.ico" >  
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <script src="./js/index.js"></script>
    </head>
    <body onload="load();">
-      <span class="lab">Entrada:</span><br>
+      <span class="lab">Entrada</span><br>
       <textarea id="text2" name="text2" rows="4" cols="50" disabled></textarea>
       <br><br>
       <div id="virtualKey">
@@ -108,8 +22,8 @@
         <input id="btn11" class="keyboard" type="button" onclick="input(this);" value='k'/>
         <input id="btn12" class="keyboard" type="button" onclick="input(this);" value='l'/>
         <input id="btn13" class="keyboard" type="button" onclick="input(this);" value='m'/>
-        <input id="btnDel" type="button" value="←" onclick="del();" style="font-size: 20px; width: 60px; height: 40px;" />
-        <input id="btnCle" type="button" value="X" onclick="cle();" style="font-size: 20px; width: 60px; height: 40px;" />
+        <input id="btnDel" type="button" value="←" onclick="del();" class="keyboardSpcKey" style="font-size:30px;"/>
+        <input id="btnCle" type="button" value="X" onclick="cle();" class="keyboardSpcKey"/>
         <br />
         <input id="btn1" class="keyboard" type="button" onclick="input(this);" value='n'/>
         <input id="btn2" class="keyboard" type="button" onclick="input(this);" value='o'/>
@@ -124,18 +38,18 @@
         <input id="btn11" class="keyboard" type="button" onclick="input(this);" value='x'/>
         <input id="btn12" class="keyboard" type="button" onclick="input(this);" value='y'/>
         <input id="btn13" class="keyboard" type="button" onclick="input(this);" value='z'/>
-        <input id="btnSpace" type="button" onclick="space();" value='Space' style="font-size: 15px; width: 60px; height: 40px;"/>
-        <input id="btnEnter" type="button" onclick="enter();" value='Enter' style="font-size: 15px; width: 60px; height: 40px;"/>
+        <input id="btnSpace" type="button" onclick="space();" value='⎵' class="keyboardSpcKey" style="font-size:30px; padding-bottom: 40px;"/>
+        <input id="btnEnter" type="button" onclick="enter();" value='↵' class="keyboardSpcKey" style="font-size: 40px;" />
         <br />
       </div>
       <br><br>
-      <span class="lab">Tradução:</span><br>
+      <span class="lab">Tradução</span><br>
       <textarea  id="result2" name="result2" rows="4" cols="50" disabled></textarea>
       <br><br><hr><br>
-      <span class="lab">Entrada:</span><br>
+      <span class="lab">Entrada</span><br>
       <textarea id="text" name="text" rows="4" cols="50" placeholder='Escreva seu texto aqui' oninput="translate1();"></textarea>
       <br><br>
-      <span class="lab">Tradução:</span><br>
+      <span class="lab">Tradução</span><br>
       <textarea  id="result" name="result" rows="4" cols="50" disabled></textarea>
    </body>
 </html>
